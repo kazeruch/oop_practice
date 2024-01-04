@@ -1,4 +1,4 @@
-package important_class;
+package src.important_class;
 
 public class MyPoint {
     private int x; // x 座標を入れる変数
@@ -30,5 +30,18 @@ public class MyPoint {
         boolean ans;
         ans = (getX() == aPoint.getX()) && (getY() == aPoint.getY());
         return ans;
+    }
+
+    public double distance(MyPoint anotherPoint) {
+        int diffX = getX() - anotherPoint.getX();
+        // 自分の x 座標 - 相手の x 座標
+        int diffY = getY() - anotherPoint.getY();
+        // 自分の y 座標 - 相手の y 座標
+        double distance = Math.sqrt(diffX * diffX + diffY * diffY);
+        return distance;
+    }
+
+    public String toString() {
+        return "a MyPoint(" + getX() + ", " + getY() + ")";
     }
 }

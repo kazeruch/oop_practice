@@ -1,4 +1,4 @@
-import important_class.MyPoint;
+import src.important_class.MyPoint;
 
 public class MyPointTest {
     public static void main(String[] args) {
